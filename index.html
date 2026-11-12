@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Decor AI | تصميم ثلاثي الأبعاد وتصورات داخلية بالذكاء الاصطناعي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- شريط التنقل العلوي -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-icon">✦</span>
+                <span>Home Decor <strong>AI</strong></span>
+            </a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="القائمة">☰</button>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#home">الرئيسية</a>
+                <a href="#ai-studio">استوديو AI</a>
+                <a href="#about">من نحن</a>
+                <a href="#residential">المنازل والشقق</a>
+                <a href="#commercial">الشركات والمكاتب</a>
+                <a href="#retail">المحلات والمتاجر</a>
+                <a href="#consultation" class="nav-cta">اطلب استشارة</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- القسم الرئيسي (Hero Section) -->
+    <section id="home" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="badge">تقنية الريندر المعماري بالذكاء الاصطناعي 2026</div>
+                <h1>حوّل مخطط الأرضية أو مفهوم التصميم إلى <span>صور 3D واقعية</span> جاهزة للتسويق</h1>
+                <p>
+                    أقوم بإنشاء صور ثلاثية الأبعاد واقعية وتصورات داخلية احترافية للشقق، المنازل، الشركات، المتاجر، وقوائم العقارات. نمنح مشاريعك العقارية والتجارية حياة بصرية فائقة الدقة خلال ثوانٍ.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#ai-studio" class="btn btn-primary">جرّب مولد الذكاء الاصطناعي</a>
+                    <a href="#consultation" class="btn btn-outline">احجز استشارة عقارية</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <strong>+1,500</strong>
+                        <span>تصور 3D مكتمل</span>
+                    </div>
+                    <div class="stat-item">
+                        <strong>4K</strong>
+                        <span>دقة واقعية للتسويق</span>
+                    </div>
+                    <div class="stat-item">
+                        <strong>24/7</strong>
+                        <span>معالجة فورية بالـ AI</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="render-showcase-card">
+                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=80" alt="تصميم داخلي ثلاثي الأبعاد واقعي">
+                    <div class="render-overlay-tag">
+                        <span>● ريندر AI واقعي - فيلا سكنية حديثة</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- استوديو التصميم التفاعلي بالذكاء الاصطناعي -->
+    <section id="ai-studio" class="ai-studio section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">محرك Home Decor AI</span>
+                <h2>حوّل فكرتك أو مخططك إلى تصميم ثلاثي الأبعاد</h2>
+                <p>اختر نوع العقار، حدد الطراز المعماري، أو ارفع مخطط الأرضية (2D) لمعاينة النتيجة الواقعية</p>
+            </div>
+
+            <div class="studio-box">
+                <div class="studio-controls">
+                    <div class="form-group">
+                        <label>1. نوع المساحة / العقار</label>
+                        <select id="spaceType">
+                            <option value="apartment">شقة سكنية حديثة (Apartment)</option>
+                            <option value="villa">منزل / فيلا مستقلة (House / Villa)</option>
+                            <option value="office">مكتب شركة / مقر إداري (Corporate Office)</option>
+                            <option value="retail">متجر تجاري / معرض بيع (Retail Store)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>2. الطراز المعماري والتصميم الداخلي</label>
+                        <select id="designStyle">
+                            <option value="modern">مودرن معاصر (Modern Luxury)</option>
+                            <option value="neoclassic">نيو كلاسيك فاخر (Neoclassic)</option>
+                            <option value="minimalist">مينيمال بسيط وهادئ (Minimalist)</option>
+                            <option value="industrial">صناعي تجاري (Commercial Industrial)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>3. ارفع مخطط الأرضية أو صورة المساحة (اختياري)</label>
+                        <label class="file-upload-area" for="floorplanInput">
+                            <span id="fileNameDisplay">📁 اضغط لرفع مخطط 2D أو صورة الغرفة</span>
+                            <input type="file" id="floorplanInput" accept="image/*" hidden>
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label>4. وصف إضافي للتفاصيل والإضاءة</label>
+                        <textarea id="aiPrompt" rows="2" placeholder="مثال: إضاءة طبيعية دافئة، أرضيات رخام أبيض، أثاث خشبي فاخر مناسب للتسويق العقاري..."></textarea>
+                    </div>
+
+                    <button id="generateRenderBtn" class="btn btn-primary btn-full">✨ توليد التصميم ثلاثي الأبعاد الآن</button>
+                </div>
+
+                <div class="studio-preview">
+                    <div class="preview-header">
+                        <span id="previewStatus">جاهز للمعالجة بالذكاء الاصطناعي</span>
+                        <span class="quality-badge">Realistic 3D Engine</span>
+                    </div>
+                    <div class="preview-canvas" id="previewCanvas">
+                        <img id="renderedImage" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1000&q=80" alt="معاينة التصميم">
+                        <div class="loader-overlay" id="aiLoader">
+                            <div class="spinner"></div>
+                            <p>جاري تحليل الأبعاد وبناء الإضاءة الواقعية 3D...</p>
+                        </div>
+                    </div>
+                    <div class="preview-footer">
+                        <p id="renderCaption">معاينة افتراضية: شقة سكنية بتصميم مودرن معاصر جاهزة للعرض العقاري.</p>
+                        <a href="#consultation" class="btn btn-sm btn-outline">اطلب الملف عالي الدقة</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم من نحن -->
+    <section id="about" class="about section-padding bg-light">
+        <div class="container about-grid">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80" alt="من نحن Home Decor AI">
+            </div>
+            <div class="about-content">
+                <span class="sub-title">من نحن</span>
+                <h2>نجمع بين الخبرة المعمارية وقوة الذكاء الاصطناعي</h2>
+                <p>
+                    في <strong>Home Decor AI</strong>، نقدم حلولاً بصرية متطورة للمطورين العقاريين، المهندسين، وأصحاب المشاريع التجارية. مهمتنا هي تحويل المخططات الهندسية الصماء والغرف الفارغة إلى تصورات داخلية ثلاثية الأبعاد تنبض بالحياة.
+                </p>
+                <ul class="feature-list">
+                    <li>✔ تسريع مبيعات العقارات عبر صور تسويقية مقنعة وواقعية قبل التنفيذ.</li>
+                    <li>✔ تقليل تكاليف التصميم التقليدي بنسبة تصل إلى 70% مع سرعة فائقة.</li>
+                    <li>✔ تغطية شاملة لكافة القطاعات السكنية، الإدارية، والتجارية المتخصصة.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المنازل والشقق (القطاع السكني) -->
+    <section id="residential" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">القطاع السكني والعقارات</span>
+                <h2>قسم المنازل والشقق السكنية</h2>
+                <p>تصورات داخلية متكاملة للفلل، المنازل المستقلة، والشقق المعروضة للبيع أو الاستثمار</p>
+            </div>
+
+            <div class="tabs-bar" data-group="residential">
+                <button class="tab-btn active" data-filter="all">الكل</button>
+                <button class="tab-btn" data-filter="houses">قسم المنازل والفلل</button>
+                <button class="tab-btn" data-filter="apartments">قسم الشقق السكنية</button>
+            </div>
+
+            <div class="cards-grid" id="residentialGrid">
+                <!-- المنازل -->
+                <div class="sector-card" data-category="houses">
+                    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80" alt="تصميم فيلا ومنزل">
+                    <div class="card-body">
+                        <span class="tag">قسم المنازل</span>
+                        <h3>الفلل والمنازل المستقلة</h3>
+                        <p>تصميم الصالات المفتوحة، الواجهات الداخلية، الحدائق المنزلية، وغرف المعيشة العائلية بواقعية مذهلة.</p>
+                    </div>
+                </div>
+
+                <div class="sector-card" data-category="houses">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="مخطط منزل ثلاثي الأبعاد">
+                    <div class="card-body">
+                        <span class="tag">قسم المنازل</span>
+                        <h3>تحويل مخططات المنازل إلى 3D</h3>
+                        <p>توزيع ذكي للأثاث والإضاءة لكل طابق في المنزل لمساعدة الملاك والمشترين على تصور المساحات بدقة.</p>
+                    </div>
+                </div>
+
+                <!-- الشقق -->
+                <div class="sector-card" data-category="apartments">
+                    <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80" alt="شقق سكنية مودرن">
+                    <div class="card-body">
+                        <span class="tag">قسم الشقق</span>
+                        <h3>شقق الاستوديو والشقق الفاخرة</h3>
+                        <p>استغلال مثالي للمساحات الصغيرة والمتوسطة وإظهارها بأسلوب عصري جذاب لقوائم التسويق العقاري.</p>
+                    </div>
+                </div>
+
+                <div class="sector-card" data-category="apartments">
+                    <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&q=80" alt="تأثيث افتراضي للشقق">
+                    <div class="card-body">
+                        <span class="tag">قسم الشقق</span>
+                        <h3>التأثيث الافتراضي (Virtual Staging)</h3>
+                        <p>تحويل صور الشقق الفارغة إلى شقق مفروشة بالكامل بأحدث صيحات الديكور لرفع قيمة العقار.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الشركات وفروعها والمكاتب -->
+    <section id="commercial" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">بيئات الأعمال والإدارة</span>
+                <h2>الشركات مع فروعها وتخصصها & قسم المكاتب</h2>
+                <p>تصميم بيئات عمل احترافية تعكس هوية العلامة التجارية وترفع إنتاجية الفرق</p>
+            </div>
+
+            <div class="cards-grid three-cols">
+                <div class="sector-card">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="مقرات الشركات الرئيسية">
+                    <div class="card-body">
+                        <span class="tag">الشركات وفروعها</span>
+                        <h3>المقرات الرئيسية والفروع الإقليمية</h3>
+                        <p>توحيد الهوية البصرية والمعمارية لكافة فروع الشركة، بما يشمل بهو الاستقبال، قاعات المؤتمرات، ومراكز خدمة العملاء.</p>
+                        <ul class="mini-branches">
+                            <li>• فروع البنوك والمؤسسات المالية</li>
+                            <li>• فروع شركات الاتصالات والتقنية</li>
+                            <li>• فروع العيادات والمراكز الطبية المتخصصة</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="sector-card">
+                    <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80" alt="قسم المكاتب الإدارية">
+                    <div class="card-body">
+                        <span class="tag">قسم المكاتب</span>
+                        <h3>المكاتب الإدارية والتنفيذية</h3>
+                        <p>تصميم مكاتب المدراء، مساحات العمل المشتركة (Co-working Spaces)، وغرف الاجتماعات الذكية بأعلى معايير الراحة.</p>
+                        <ul class="mini-branches">
+                            <li>• مكاتب المحاماة والاستشارات الهندسية</li>
+                            <li>• مكاتب الشركات الناشئة والتسويق</li>
+                            <li>• تقسيمات زجاجية وعزل صوتي بصري</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="sector-card">
+                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="فروع الشركات المتخصصة">
+                    <div class="card-body">
+                        <span class="tag">التخصص المؤسسي</span>
+                        <h3>مراكز التدريب وصالات العرض للشركات</h3>
+                        <p>تصورات ثلاثية الأبعاد مخصصة لفروع الشركات الصناعية والتعليمية لعرض المنتجات والخدمات بأسلوب مؤسسي متكامل.</p>
+                        <ul class="mini-branches">
+                            <li>• صالات عرض الوكالات والسيارات</li>
+                            <li>• المعاهد ومراكز التدريب المعتمدة</li>
+                            <li>• مكاتب خدمة كبار العملاء VIP</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المحلات وفروع تخصصها والمتاجر وفروع تخصصها -->
+    <section id="retail" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-title">القطاع التجاري والتجزئة</span>
+                <h2>المحلات وفروع تخصصها & المتاجر وفروع تخصصها</h2>
+                <p>تصميم واجهات وعروض داخلية تجذب المتسوقين وتزيد من معدلات الشراء داخل كل فرع</p>
+            </div>
+
+            <div class="dual-sector-grid">
+                <!-- عمود المحلات وفروع تخصصها -->
+                <div class="category-panel">
+                    <div class="panel-header">
+                        <h3>🏪 قسم المحلات وفروع تخصصها</h3>
+                        <p>تصاميم مخصصة للمحلات التجارية ذات الطابع التخصصي الدقيق:</p>
+                    </div>
+                    <div class="branch-list">
+                        <div class="branch-item">
+                            <strong>محلات الأزياء والعطور ومستحضرات التجميل</strong>
+                            <span>إضاءة مركزة (Spotlights) ورفوف عرض فاخرة تبرز تفاصيل المنتجات.</span>
+                        </div>
+                        <div class="branch-item">
+                            <strong>محلات المجوهرات والساعات والنظارات</strong>
+                            <span>تصميم فاترينات عرض زجاجية آمنة وعصرية تعكس الفخامة والرقي.</span>
+                        </div>
+                        <div class="branch-item">
+                            <strong>محلات الحلويات، الكافيهات، والمخابز المتخصصة</strong>
+                            <span>توزيع انسيابي لمنطقة الطلب والجلوس مع ألوان دافئة تفتح الشهية.</span>
+                        </div>
+                        <div class="branch-item">
+                            <strong>محلات الهواتف الذكية والإلكترونيات</strong>
+                            <span>طاولات عرض تفاعلية وتنظيم عصري للإكسسوارات والخدمات.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- عمود المتاجر وفروع تخصصها -->
+                <div class="category-panel">
+                    <div class="panel-header">
+                        <h3>🏬 قسم المتاجر وفروع تخصصها</h3>
+                        <p>تخطيط وتصور المتاجر الكبرى والسلاسل التجارية متعددة الأقسام:</p>
+                    </div>
+                    <div class="branch-list">
+                        <div class="branch-item">
+                            <strong>متاجر السوبرماركت والهايبرماركت</strong>
+                            <span>تخطيط ممرات التسوق، ثلاجات العرض، ونقاط الدفع لتسهيل حركة المتسوقين.</span>
+                        </div>
+                        <div class="branch-item">
+                            <strong>متاجر الأثاث والديكور المنزلي (Showrooms)</strong>
+                            <span>بناء أجنحة عرض متكاملة تحاكي الغرف الحقيقية لإلهام العملاء.</span>
+                        </div>
+                        <div class="branch-item">
+                            <strong>متاجر المستلزمات الرياضية والأجهزة الكهربائية</strong>
+                            <span>تقسيمات واضحة حسب العلامات التجارية مع لوحات إرشادية حديثة.</span>
+                        </div>
+                        <div class="branch-item">
+                            <strong>المتاجر الكبرى متعددة الطوابق (Department Stores)</strong>
+                            <span>تصورات ثلاثية الأبعاد تربط بين الطوابق والمصاعد وتبرز الهوية التجارية الموحدة.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم طلب استشارة -->
+    <section id="consultation" class="consultation section-padding bg-dark">
+        <div class="container consultation-grid">
+            <div class="consultation-info">
+                <span class="sub-title light">ابدأ مشروعك الآن</span>
+                <h2>اطلب استشارة تصميم ثلاثي الأبعاد</h2>
+                <p>
+                    هل لديك مخطط أرضية لشقة، منزل، شركة، أو متجر وتريد تحويله إلى صور ثلاثية الأبعاد واقعية جاهزة للتسويق؟ أرسل تفاصيل مشروعك وسنتواصل معك فوراً.
+                </p>
+                <div class="contact-direct-box">
+                    <p><strong>البريد الإلكتروني الرسمي:</strong></p>
+                    <a href="mailto:emadjaber23@gmail.com" class="email-link">emadjaber23@gmail.com</a>
+                </div>
+            </div>
+
+            <form id="consultationForm" class="consultation-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>الاسم الكامل *</label>
+                        <input type="text" id="clientName" required placeholder="أدخل اسمك الكريم">
+                    </div>
+                    <div class="form-group">
+                        <label>البريد الإلكتروني *</label>
+                        <input type="email" id="clientEmail" required placeholder="example@domain.com">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>نوع العقار / المشروع *</label>
+                        <select id="projectCategory" required>
+                            <option value="شقة سكنية">شقة سكنية</option>
+                            <option value="منزل / فيلا">منزل / فيلا</option>
+                            <option value="شركة / فرع شركة">شركة / فرع شركة</option>
+                            <option value="مكتب إداري">مكتب إداري</option>
+                            <option value="محل تجاري">محل تجاري</option>
+                            <option value="متجر / معرض">متجر / معرض</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>رقم الهاتف / واتساب</label>
+                        <input type="tel" id="clientPhone" placeholder="+962 7X XXX XXXX">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>تفاصيل المشروع أو رابط المخطط *</label>
+                    <textarea id="projectDetails" rows="4" required placeholder="اشرح مساحة المشروع، عدد الغرف أو الأقسام، والهدف من التصميم (تسويق عقاري، تنفيذ، تجديد)..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full">إرسال طلب الاستشارة</button>
+                <p id="formFeedback" class="form-feedback"></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- التذييل (Footer) -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#home" class="logo">
+                    <span class="logo-icon">✦</span>
+                    <span>Home Decor <strong>AI</strong></span>
+                </a>
+                <p>تصميم ثلاثي الأبعاد واقعي للشقق، المنازل، الشركات، والمحلات والمتاجر لأغراض العقارات والتصميم الداخلي بالذكاء الاصطناعي.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>الأقسام الرئيسية</h4>
+                <a href="#home">الرئيسية</a>
+                <a href="#about">من نحن</a>
+                <a href="#residential">المنازل والشقق</a>
+                <a href="#commercial">الشركات والمكاتب</a>
+                <a href="#retail">المحلات والمتاجر</a>
+            </div>
+
+            <div class="footer-links">
+                <h4>السياسات والتواصل</h4>
+                <button type="button" class="legal-link-btn" onclick="openModal('privacyModal')">سياسة الخصوصية</button>
+                <button type="button" class="legal-link-btn" onclick="openModal('termsModal')">الشروط والأحكام</button>
+                <a href="#consultation">اطلب استشارة</a>
+                <a href="mailto:emadjaber23@gmail.com">اتصل بنا: emadjaber23@gmail.com</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Home Decor AI. جميع الحقوق محفوظة | للتواصل المباشر: <a href="mailto:emadjaber23@gmail.com">emadjaber23@gmail.com</a></p>
+        </div>
+    </footer>
+
+    <!-- أداة الدردشة المباشرة العائمة (Live Chat) -->
+    <div class="chat-widget">
+        <button class="chat-toggle-btn" id="chatToggleBtn" aria-label="الدردشة المباشرة">
+            💬 <span>دردشة مباشرة</span>
+        </button>
+
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <div>
+                    <strong>مساعد Home Decor AI</strong>
+                    <small>● متصل الآن للرد على استفساراتك</small>
+                </div>
+                <button id="closeChatBtn" class="close-chat">✕</button>
+            </div>
+
+            <div class="chat-messages" id="chatMessages">
+                <div class="msg bot-msg">
+                    مرحباً بك في <strong>Home Decor AI</strong>! 👋<br>
+                    كيف يمكنني مساعدتك اليوم في تحويل مخطط شقتك، منزلك، مكتبك، أو متجرك إلى صور ثلاثية الأبعاد واقعية؟
+                </div>
+            </div>
+
+            <div class="chat-quick-replies">
+                <button type="button" onclick="sendQuickReply('كم تكلفة تصميم شقة 3D؟')">أسعار الشقق 3D</button>
+                <button type="button" onclick="sendQuickReply('أريد تصميم متجر أو شركة')">تصميم شركة / متجر</button>
+                <button type="button" onclick="sendQuickReply('كيف أرسل مخطط الأرضية؟')">إرسال مخطط</button>
+            </div>
+
+            <form class="chat-input-area" id="chatForm">
+                <input type="text" id="chatInput" placeholder="اكتب رسالتك هنا..." required>
+                <button type="submit">إرسال</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- نافذة سياسة الخصوصية -->
+    <div class="modal-backdrop" id="privacyModal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>سياسة الخصوصية - Home Decor AI</h3>
+                <button class="close-modal" onclick="closeModal('privacyModal')">✕</button>
+            </div>
+            <div class="modal-body">
+                <p>نحن في <strong>Home Decor AI</strong> نلتزم بحماية خصوصية بياناتك ومخططاتك الهندسية والعقارية بأعلى معايير الأمان:</p>
+                <ul>
+                    <li><strong>سرية المخططات والصور:</strong> جميع مخططات الأرضية والصور المرفوعة لغرض المعالجة بالذكاء الاصطناعي تُستخدم حصرياً لتنفيذ مشروعك ولا يتم مشاركتها أو بيعها لأي طرف ثالث.</li>
+                    <li><strong>البيانات الشخصية:</strong> نجمع فقط المعلومات الضرورية للتواصل معك وتقديم الاستشارات (مثل الاسم، البريد الإلكتروني، ورقم الهاتف).</li>
+                    <li><strong>التواصل والدعم:</strong> لأي استفسار حول بياناتك أو طلب حذفها، يمكنك مراسلتنا مباشرة عبر البريد الإلكتروني: <strong>emadjaber23@gmail.com</strong>.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- نافذة الشروط والأحكام -->
+    <div class="modal-backdrop" id="termsModal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>الشروط والأحكام - Home Decor AI</h3>
+                <button class="close-modal" onclick="closeModal('termsModal')">✕</button>
+            </div>
+            <div class="modal-body">
+                <p>باستخدامك لموقع وخدمات <strong>Home Decor AI</strong>، فإنك توافق على الشروط التالية:</p>
+                <ul>
+                    <li><strong>طبيعة الخدمة:</strong> نقدم خدمات التصور الداخلي والتصميم ثلاثي الأبعاد الواقعي بالذكاء الاصطناعي لأغراض العرض والتسويق العقاري والتصميم الداخلي للشقق، المنازل، الشركات، والمحلات.</li>
+                    <li><strong>حقوق الاستخدام:</strong> يحق للعميل استخدام الصور ثلاثية الأبعاد النهائية في الحملات التسويقية، الإعلانات العقارية، والعروض التقديمية الخاصة بمشروعه.</li>
+                    <li><strong>دقة المخططات:</strong> تعتمد جودة التصور النهائي على وضوح مخطط الأرضية أو التفاصيل المقدمة من العميل عند طلب الاستشارة.</li>
+                    <li><strong>الدعم والتعديلات:</strong> يتم الاتفاق على عدد التعديلات ومواعيد التسليم عبر البريد الرسمي: <strong>emadjaber23@gmail.com</strong>.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
